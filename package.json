@@ -1,0 +1,19 @@
+{
+  "name": "grimoirerpg",
+  "version": "1.0.0",
+  "description": "Become a Mage, Write your own Grimoire, then Conjure and Create your very own Spells.",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lenicon/grimoireRPG.git"
+  },
+  "author": "Len.icon",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Lenicon/grimoireRPG/issues"
+  },
+  "homepage": "https://github.com/Lenicon/grimoireRPG#readme"
+}
