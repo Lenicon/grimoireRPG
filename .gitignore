@@ -3,3 +3,5 @@ node_modules
 config.json
 .eslintrc.json
 .venv
+LICENSE
+README.md

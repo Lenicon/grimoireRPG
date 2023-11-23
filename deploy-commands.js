@@ -1,7 +1,7 @@
 const { REST, Routes } = require('discord.js');
 
-const clientId = process.env.DISCORD_CLIENTID;
-const guildId = process.env.DISCORD_GUILDID;
+const clientId = process.env['DISCORD_CLIENTID'];
+const guildId = process.env['DISCORD_GUILDID'];
 
 const fs = require('node:fs');
 const path = require('node:path');
@@ -37,6 +37,7 @@ const rest = new REST().setToken(process.env.DISCORD_TOKEN);
 
         // The put method is used to fully refresh all commands in the guild with the current set
         const data = await rest.put(
+            Routes.applicationCommands(clientId),
             Routes.applicationGuildCommands(clientId, guildId),
             { body: commands },
         );
