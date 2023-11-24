@@ -4,7 +4,8 @@
   "description": "Become a Mage, Write your own Grimoire, then Conjure and Create your very own Spells.",
   "main": "./index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "dp": "node deploy-commands.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/Lenicon/grimoireRPG#readme",
   "dependencies": {
+    "config.json": "^0.0.4",
     "discord.js": "^14.14.1",
     "node": "^21.1.0"
   },

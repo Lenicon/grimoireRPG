@@ -9,7 +9,7 @@ module.exports = {
     const command = interaction.client.commands.get(interaction.commandName);
 
     if (!command) {
-      console.error(`\`[ERROR] Command matching ${interaction.commandName} not found.\``);
+      console.error(`\`\`\`[ERROR] Command matching '${interaction.commandName}' not found.\`\`\``);
       return;
     }
 
@@ -29,7 +29,7 @@ module.exports = {
 
       if (now < expirationTime) {
         const expiredTimestamp = Math.round(expirationTime / 1000);
-        return interaction.reply({ content: `\`[COOLDOWN] ${command.data.name}: ${expiredTimestamp}ms left.\``, ephemeral: true });
+        return interaction.reply({ content: `\`\`\`[COOLDOWN] Command '${command.data.name}' has ${expiredTimestamp}ms left.\`\`\``, ephemeral: true });
       }
     }
 
@@ -39,7 +39,7 @@ module.exports = {
     try {
       await command.execute(interaction);
     } catch (error) {
-      console.error(`\`[ERROR] Executing ${interaction.commandName} failed.\``);
+      console.error(`\`\`\`[ERROR] Executing Command '${interaction.commandName}' failed.\`\`\``);
       console.error(error);
     }
   },
