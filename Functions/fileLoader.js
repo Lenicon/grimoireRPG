@@ -1,6 +1,6 @@
 const { glob } = require("glob");
 const { promisify } = require("util");
-const proGlob =glob;
+const proGlob = promisify(glob);
 
 async function loadFiles(dirName) {
     const Files = await proGlob(`${process.cwd().replace(/\\/g, "/")}/${dirName}/**/*.js`);

@@ -1,8 +1,12 @@
-const { isChatInputCommandInteraction, Collection } = require('discord.js');
+const { ChatInputCommandInteraction, Collection } = require('discord.js');
 const { client } = require("../../index.js");
 
 module.exports = {
   name: "interactionCreate",
+  /**
+   * 
+   * @param {ChatInputCommandInteraction} interaction 
+   */
   async execute(interaction, client) {
     if (!interaction.isChatInputCommand()) return;
 
