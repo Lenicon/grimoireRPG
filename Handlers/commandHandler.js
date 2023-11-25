@@ -3,7 +3,9 @@ async function loadCommands(client) {
     const ascii = require("ascii-table");
     const table = new ascii().setHeading("Commands", "Status");
 
+    // Clear all old commands
     await client.commands.clear();
+    await client.application.commands.set([]);
 
     let commandsArray = [];
 
@@ -18,6 +20,7 @@ async function loadCommands(client) {
         table.addRow(command.data.name, "✅");
     });
 
+    // Set the new commands
     client.application.commands.set(commandsArray);
 
     return console.log(table.toString(), "\nCommands Loaded.");
