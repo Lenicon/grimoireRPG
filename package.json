@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/Lenicon/grimoireRPG#readme",
   "dependencies": {
+    "ascii-table": "^0.0.9",
     "config.json": "^0.0.4",
     "discord.js": "^14.14.1",
+    "glob": "^10.3.10",
     "node": "^21.1.0"
   },
   "keywords": []

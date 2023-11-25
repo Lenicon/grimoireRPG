@@ -18,7 +18,7 @@ async function loadCommands(client) {
         table.addRow(command.data.name, "✅");
     });
 
-    client.applications.commands.set(commandsArray);
+    client.application.commands.set(commandsArray);
 
     return console.log(table.toString(), "\nCommands Loaded.");
 
